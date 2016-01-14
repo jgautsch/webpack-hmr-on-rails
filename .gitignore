@@ -15,3 +15,10 @@
 spring.log
 *.DS_Store
 .pryrc
+
+# Npm and Webpack related stuff
+node_modules/*
+client/node_modules/*
+npm-debug.log
+npm-debug.log*
+*webpack_bundle.js

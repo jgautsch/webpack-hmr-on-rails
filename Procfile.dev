@@ -1,0 +1,4 @@
+# foreman start -f Procfile.dev
+
+web: rails s
+client: sh -c 'cd client && npm start'
