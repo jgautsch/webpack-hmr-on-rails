@@ -1,0 +1,16 @@
+{
+  "name": "Timer",
+  "version": "0.0.1",
+  "description": "Example app showing npm, webpack etc. with rails for nash.rb talk",
+  "engines": {
+    "node": "4.2.2",
+    "npm": "3.4.0"
+  },
+  "scripts": {
+    "postinstall": "cd ./client && npm install",
+    "test": "cd ./client && npm test"
+  },
+  "dependencies": {},
+  "author": "Jon Gautsch",
+  "license": "MIT"
+}

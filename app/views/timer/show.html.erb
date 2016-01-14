@@ -1,49 +1,9 @@
-<h1>Timer Page</h1>
-<button id="timer-toggle">Time Me</button>
-<span id="timer-counter"></span>
-
-<script type="text/javascript">
-  var timer = {
-    initialState: {
-      time: 0,
-      running: false
-    },
-    mount: function() {
-      // Set some initial state
-      timer.state = timer.initialState;
-
-      // Make DOM match our state
-      timer.render();
-
-      // Setup some event handlers
-      $('#timer-toggle').on('click', function() {
-        timer.state.running ? timer.stop() : timer.start();
-      });
-    },
-    tick: function() {
-      timer.state.time = Math.round((timer.state.time + 0.1) * 10) / 10;
-      timer.render();
-    },
-    start: function() {
-      timer.state.running = true;
-      timer.runningTimer = setInterval(timer.tick, 100);
-      timer.render();
-    },
-    stop: function() {
-      timer.state.running = false;
-      clearInterval(timer.runningTimer);
-      timer.render();
-    },
-    render: function() {
-      $('#timer-counter').text(timer.state.time);
-      if (timer.state.running) {
-        $('#timer-toggle').text('Stop')
-      } else {
-        $('#timer-toggle').text('Start')
-      }
-    }
-  };
-
-  timer.mount();
-
-</script>
+<div class="container">
+  <h1>Timer Page</h1>
+  <div>
+    <button id="timer-toggle">Time Me</button>
+  </div>
+  <div>
+    <span id="timer-counter"></span>
+  </div>  
+</div>
